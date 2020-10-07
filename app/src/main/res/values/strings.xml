@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">mypolioapp</string>
+    <string name="logo">logo</string>
+    <string name="houseno">House NO</string>
+    <string name="couples">Total Couples</string>
+    <string name="total_children">Total Children</string>
+    <string name="vaccinated">Vaccinated</string>
+    <string name="below_12m">Children below 12m</string>
+    <string name="below_9y">Children below 9year</string>
+    <string name="fullname">Full name</string>
+    <string name="username">Username</string>
+    <string name="phoneno">Phone no</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+</resources>

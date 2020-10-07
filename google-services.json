@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "529760176085",
+    "firebase_url": "https://newdatabase-a2da6.firebaseio.com",
+    "project_id": "newdatabase-a2da6",
+    "storage_bucket": "newdatabase-a2da6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529760176085:android:6470c255e04d82ee0e5f5c",
+        "android_client_info": {
+          "package_name": "com.finalcode.polioapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529760176085-u42ehrs4u9am87sp12o89jnbhpraquqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finalcode.polioapp",
+            "certificate_hash": "e9b73a6c5f0e1b3f78bffd24be07997aa54dcf46"
+          }
+        },
+        {
+          "client_id": "529760176085-qvjt31poc813m65jecqc0ju5pbhtblfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3dhSgc_bR5MUOaKM11BI4zd7rQsFTM0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529760176085-qvjt31poc813m65jecqc0ju5pbhtblfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
