@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="30dp"
+        android:layout_margin="20sp"
+
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/phoneno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:inputType="number"
+            android:hint="Enter Phoneno"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/login"
+        android:textColorHint="@android:color/holo_blue_dark"
+            />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_margin="20dp"
+        android:inputType="text"
+        android:layout_below="@+id/phoneno"
+        android:textColorHint="@android:color/holo_blue_dark"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PAssword"
+        android:inputType="numberPassword"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/name"
+        android:textColorHint="@android:color/holo_blue_dark"
+        />
+    <Button
+        android:id="@+id/join_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/password"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:text="Join Now"
+        android:textSize="18dp"
+        android:textColor="#ffff"
+        />
+
+
+
+
+</RelativeLayout>
