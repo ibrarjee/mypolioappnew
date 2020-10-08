@@ -23,98 +23,113 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 
 public class signup extends AppCompatActivity {
-    TextInputLayout regName,  regPhoneNO, regPassword ;
-    Button regbtn ;
+
+    private Button CreateAccountButton;
+    private TextInputLayout  InputName, InputPhoneNumber, InputPassword;
     private ProgressDialog loadingBar;
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        regName = findViewById(R.id.fullname);
-        regPhoneNO = findViewById(R.id.phoneno);
-        regPassword = findViewById(R.id.password);
-        regbtn = findViewById(R.id.button);
+
+
+        CreateAccountButton = (Button) findViewById(R.id.button);
+        InputName =  findViewById(R.id.fullname);
+        InputPassword =  findViewById(R.id.password);
+        InputPhoneNumber =  findViewById(R.id.phoneno);
         loadingBar = new ProgressDialog(this);
 
-        regbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateAccont();
 
+        CreateAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                CreateAccount();
             }
         });
     }
 
-    private void CreateAccont() {
-        String name = regName.getEditText().getText().toString();
-        String phoneno = regPhoneNO.getEditText().getText().toString();
-        String password = (regPassword.getEditText()).getText().toString();
-         if(TextUtils.isEmpty(name) ){
-          Toast.makeText(this, "please enter name",Toast.LENGTH_SHORT).show();
-         }
 
-       else if(TextUtils.isEmpty(phoneno) ){
-            Toast.makeText(this, "please enter phoneno",Toast.LENGTH_SHORT).show();
+
+    private void CreateAccount()
+    {
+        String name = InputName.getEditText().getText().toString();
+        String phone = InputPhoneNumber.getEditText().getText().toString();
+        String password = InputPassword.getEditText().getText().toString();
+
+        if (TextUtils.isEmpty(name))
+        {
+            Toast.makeText(this, "Please write your name...", Toast.LENGTH_SHORT).show();
         }
-       else if(TextUtils.isEmpty(password) ){
-            Toast.makeText(this, "please enter password",Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(phone))
+        {
+            Toast.makeText(this, "Please write your phone number...", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(password))
+        {
+            Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            loadingBar.setTitle("Create Account");
+            loadingBar.setMessage("Please wait, while we are checking the credentials.");
+            loadingBar.setCanceledOnTouchOutside(false);
+            loadingBar.show();
 
+            ValidatephoneNumber(name, phone, password);
+        }
     }
-       else {
-           loadingBar.setTitle("Create account");
-           loadingBar.setMessage("Please wait, while we check you data");
-           loadingBar.setCanceledOnTouchOutside(false);
-           loadingBar.show();
 
-         }
 
-}
 
-    private void Validatephonenumber(final String name, final String phoneno, final String password) {
-        final DatabaseReference Rootref;
-        Rootref = FirebaseDatabase.getInstance().getReference();
+    private void ValidatephoneNumber(final String name, final String phone, final String password)
+    {
+        final DatabaseReference RootRef;
+        RootRef = FirebaseDatabase.getInstance().getReference();
 
-        Rootref.addListenerForSingleValueEvent(new ValueEventListener() {
+        RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.child("users").child(phoneno).exists())
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                if (!(dataSnapshot.child("Users").child(phone).exists()))
                 {
-                    HashMap<String, Object> userdatamap =new  HashMap <>();
-                    userdatamap.put("name",name);
-                    userdatamap.put("phoneno",phoneno);
-                    userdatamap.put("password",password);
-                    Rootref.child("users").child(phoneno).updateChildren(userdatamap)
+                    HashMap<String, Object> userdataMap = new HashMap<>();
+                    userdataMap.put("phone", phone);
+                    userdataMap.put("password", password);
+                    userdataMap.put("name", name);
+
+                    RootRef.child("Users").child(phone).updateChildren(userdataMap)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task)
-
-                            {
-                                if(task.isSuccessful())
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task)
                                 {
-                                Toast.makeText(signup.this, "you have successfully login",Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                                Intent intent =new Intent(signup.this, Home.class);
-                                startActivity(intent);
-                                }
-                                else {
-                                    Toast.makeText(signup.this, "error occur",Toast.LENGTH_SHORT).show();
-                                }
-                            }
+                                    if (task.isSuccessful())
+                                    {
+                                        Toast.makeText(signup.this, "Congratulations, your account has been created.", Toast.LENGTH_SHORT).show();
+                                        loadingBar.dismiss();
 
-
+                                        Intent intent = new Intent(signup.this, login.class);
+                                        startActivity(intent);
+                                    }
+                                    else
+                                    {
+                                        loadingBar.dismiss();
+                                        Toast.makeText(signup.this, "Network Error: Please try again after some time...", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
                             });
-
-            }
-                else{
-                    Toast.makeText(signup.this, "this" + phoneno + "already exist", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(signup.this, "This " + phone + " already exists.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Intent intent =new Intent(signup.this, MainActivity.class);
-                    startActivity(intent);
+                    Toast.makeText(signup.this, "Please try again using another phone number.", Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(signup.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
 
@@ -124,4 +139,4 @@ public class signup extends AppCompatActivity {
             }
         });
     }
-    }
+}
