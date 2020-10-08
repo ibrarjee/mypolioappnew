@@ -13,4 +13,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
 
+    <string name="submit">submit</string>
+    <string name="currenttime">CurrentTime</string>
+
 </resources>

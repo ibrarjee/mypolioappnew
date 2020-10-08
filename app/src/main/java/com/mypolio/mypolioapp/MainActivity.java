@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         joinNowButton = (Button) findViewById(R.id.join_now);
 
         loginButton = (Button) findViewById(R.id.loginbtn);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

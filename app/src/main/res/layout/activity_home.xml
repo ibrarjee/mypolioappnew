@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#b2bcf7"
     tools:context=".Home">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="#263fd1"
+        android:textStyle="bold"
+        />
+
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Start"
+        android:textSize="25sp"
+        android:background="@drawable/button"
+        android:textColor="#fffF"
+        android:layout_margin="20sp"/>
+    <Button
+        android:id="@+id/button_incharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Area Incharge inspection"
+        android:textSize="25sp"
+        android:background="@drawable/button"
+        android:layout_margin="20sp"
+        android:textColor="#fffF"/>
+
+    <Button
+        android:id="@+id/button_teaminfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Team information"
+        android:textSize="25sp"
+        android:background="@drawable/button"
+        android:textColor="#fffF"
+        android:layout_margin="20sp"/>
+    <Button
+        android:id="@+id/button_areainfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Area information"
+        android:textSize="25sp"
+        android:background="@drawable/button"
+        android:textColor="#fffF"
+        android:layout_margin="20sp"/>
+
+
+
+    <Button
+        android:id="@+id/button_saved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Saved data"
+        android:textSize="25sp"
+        android:background="@drawable/button"
+        android:textColor="#fffF"
+        android:layout_margin="20sp"/>
+
+
+
+</LinearLayout>

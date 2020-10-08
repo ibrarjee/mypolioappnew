@@ -1,17 +1,15 @@
 package com.mypolio.mypolioapp;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,10 +19,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.utilities.Validation;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public class signup extends AppCompatActivity {
     TextInputLayout regName,  regPhoneNO, regPassword ;
@@ -73,9 +69,9 @@ public class signup extends AppCompatActivity {
            loadingBar.setMessage("Please wait, while we check you data");
            loadingBar.setCanceledOnTouchOutside(false);
            loadingBar.show();
-             Validatephonenumber(name,phoneno,password);
 
          }
+
 }
 
     private void Validatephonenumber(final String name, final String phoneno, final String password) {
@@ -99,9 +95,9 @@ public class signup extends AppCompatActivity {
                             {
                                 if(task.isSuccessful())
                                 {
-                                Toast.makeText(signup.this, "your account has been created",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(signup.this, "you have successfully login",Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
-                                Intent intent =new Intent(signup.this, login.class);
+                                Intent intent =new Intent(signup.this, Home.class);
                                 startActivity(intent);
                                 }
                                 else {

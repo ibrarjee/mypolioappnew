@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".signup">
-
+    tools:context=".Data_collection">
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SignUp"
+        android:text="Data Collection"
         android:textSize="30dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
@@ -21,7 +19,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/fullname"
+        android:id="@+id/housenumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -34,13 +32,12 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/fullname"
+            android:hint="@string/houseno"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phoneno"
+        android:id="@+id/Couples"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -54,11 +51,10 @@
             android:ems="10"
             android:autofillHints=""
             android:textSize="20sp"
-            android:hint="@string/phoneno" />
+            android:hint="@string/couples"/>
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+        android:id="@+id/childern"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -68,20 +64,72 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberPassword"
+            android:inputType="number"
             android:ems="10"
             android:autofillHints=""
             android:textSize="20sp"
-            android:hint="@string/password" />
+            android:hint="@string/total_children" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/vaccinated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="@string/vaccinated" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Ageunder9months"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="AgeUnder 9months" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Ageunder9years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="Age Under 9years" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/data_submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="submit"
-        android:background="@drawable/button"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:background="@drawable/button"/>
 
 
 </LinearLayout>

@@ -6,22 +6,23 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import com.mypolio.mypolioapp.model.Users;
 
+
 public class login extends AppCompatActivity {
-    private EditText Inputnumber ,Inputpassword;
+    private  TextInputLayout Inputnumber;
+    private TextInputLayout Inputpassword;
     private Button loginbutton;
     private ProgressDialog loadingBar;
     private  String ParentDbName = "Users";
@@ -31,10 +32,11 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Inputnumber = findViewById(R.id.phoneno);
-        Inputpassword= findViewById(R.id.password);
+        Inputnumber =  findViewById(R.id.phoneno);
+        Inputpassword=  findViewById(R.id.password);
         loginbutton = findViewById(R.id.join_now);
         loadingBar = new ProgressDialog(this);
+
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,8 +51,8 @@ public class login extends AppCompatActivity {
 
     private void loginuser()
     {
-        String phoneno = Inputnumber.getText().toString();
-        String password = Inputpassword.getText().toString();
+        String phoneno = Inputnumber.getEditText().getText().toString();
+        String password = Inputpassword.getEditText().getText().toString();
          if(TextUtils.isEmpty(phoneno) )
          {
             Toast.makeText(this, "please enter phoneno",Toast.LENGTH_SHORT).show();

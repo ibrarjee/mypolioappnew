@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".signup">
+
+    tools:context=".areainformation">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/Area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SignUp"
+        android:text="Area Information"
         android:textSize="30dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
@@ -21,7 +21,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/fullname"
+        android:id="@+id/unioncouncil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -34,13 +34,82 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/fullname"
+            android:hint="Union Council"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="Zone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tehsil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="Tehsil" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phoneno"
+        android:id="@+id/district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="District" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/todayarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:autofillHints=""
+            android:textSize="20sp"
+            android:hint="Today Area" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/campaingday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -54,25 +123,7 @@
             android:ems="10"
             android:autofillHints=""
             android:textSize="20sp"
-            android:hint="@string/phoneno" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_marginBottom="10dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberPassword"
-            android:ems="10"
-            android:autofillHints=""
-            android:textSize="20sp"
-            android:hint="@string/password" />
+            android:hint="Campaing Day"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -80,8 +131,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="submit"
+        android:textSize="25sp"
         android:background="@drawable/button"
-        android:textSize="25sp"/>
+        android:padding="15dp"
+        android:textColor="#ffff"
+        android:layout_margin="10dp"/>
 
 
 </LinearLayout>
+
