@@ -17,34 +17,34 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
-        android:id="@+id/phoneno"
+        android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        android:inputType="number"
-            android:hint="Enter Phoneno"
+        android:inputType="text"
+            android:hint="Enter name"
             android:layout_margin="20dp"
             android:layout_below="@+id/login"
         android:textColorHint="@android:color/holo_blue_dark"
             />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/phoneno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="enter phone no"
         android:layout_margin="20dp"
-        android:inputType="text"
-        android:layout_below="@+id/phoneno"
+        android:inputType="number"
+        android:layout_below="@+id/name"
         android:textColorHint="@android:color/holo_blue_dark"
         />
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="PAssword"
+        android:hint="Password"
         android:inputType="numberPassword"
         android:layout_margin="20dp"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/phoneno"
         android:textColorHint="@android:color/holo_blue_dark"
         />
     <Button

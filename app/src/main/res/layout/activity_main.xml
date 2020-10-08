@@ -13,15 +13,16 @@
         android:src="@drawable/logo2"
        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        ></ImageView>
+        android:contentDescription="mainlogo"
+        />
 
 <TextView
     android:id="@+id/app_slogn"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="End Polio NOw"
+    android:text="End Polio Now"
     android:layout_below="@id/logo2"
-    android:textSize="30dp"
+    android:textSize="30sp"
     android:layout_centerHorizontal="true"/>
 
     <Button
@@ -37,9 +38,9 @@
         android:padding="20dp"
         android:textAllCaps="false"
         android:text="Already Have Account"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#ffff"
-        />
+        android:layout_alignParentLeft="true" />
     <Button
         android:id="@+id/join_now"
         android:layout_width="match_parent"
@@ -52,7 +53,7 @@
         android:padding="20dp"
         android:textAllCaps="false"
         android:text="Join Now"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#ffff"
         />
 
