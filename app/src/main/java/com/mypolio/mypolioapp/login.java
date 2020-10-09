@@ -31,7 +31,7 @@ public class login extends AppCompatActivity {
                             login.this
 
                     );
-
+                    
                     builder.setIcon(R.drawable.ic_check);
                     builder.setTitle("Login Successfully");
                     builder.setMessage("welecome");
