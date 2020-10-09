@@ -14,14 +14,14 @@
         <activity android:name=".Area_inspection" />
         <activity android:name=".Data_collection" />
         <activity android:name=".Home"></activity>
-        <activity android:name=".login" />
+        <activity android:name=".login"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".signup" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
